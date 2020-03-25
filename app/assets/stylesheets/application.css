@@ -16,9 +16,13 @@
     
 }
 
+.description {
+    margin-bottom: 60px;
+}
+
 .description p {
     margin: 0px;
-    padding: 5px;
+    padding-top: 5px;
 }
 
 .user-card {
@@ -27,4 +31,9 @@
 
 .spec {
     padding-top: 20px;
+}
+
+.ex p {
+    color: #666666;
+    font-style: italic;
 }

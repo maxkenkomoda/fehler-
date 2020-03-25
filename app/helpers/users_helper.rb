@@ -18,7 +18,7 @@ module UsersHelper
   def gender_system
     @gender = @user.gender
     
-    if @gender == 1
+    if @gender == "male"
       p '男性'
     else
       p '女性'
