@@ -6,8 +6,11 @@
       </div>
       <div class="card-body text-center">
         <img class="rounded img-fluid d-block mx-auto" src="<%= gravatar_url(@user, { size: 150 }) %>" alt="">
-        <p>年齢:<%= cal_birthday %> 歳</p>
-        <p>職業:<%= @user.job %></p>
+          <div class="spec">
+            <p>年齢:<%= cal_birthday %> 歳</p>
+            <p>職業:<%= @user.job %></p>
+            <p>性別:<%= gender_system %></p>
+          </div>
       </div>
     </div>
     <div>
