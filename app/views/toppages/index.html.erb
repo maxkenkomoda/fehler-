@@ -1,26 +1,31 @@
-<div class="text-center">
-  <h1 class="top-title">Welcome to Fehler!!</h1>
-  <h2 class="sub-title">〜失敗は成功の母〜</h2>
-</div>
-<div class="text-center">
-  <h3 class="d-title">Fehler!!とは</h3>
-  <div class='description'>
-    <p>"Fehler"とはドイツ語で「失敗」という意味です。</p>
-    <p>このサイトは失敗をみんなと共有するサイトです。</p>
-    <p>失敗から学べることはたくさんあります。</p>
-    <p>みんなの失敗から原因を研究するもよし。</p>
-    <p>失敗の備忘録にするもよし。</p>
-    <p>さあ、みんなの失敗を覗いてみましょう！！</p>
+<% if logged_in? %>
+  <div class="text-center">
+    <h1>Welcome Back!!</h1>
   </div>
-</div>
-<div class="row">
-  <div class="col-sm-2 offset-sm-3">
-     <%= link_to '会員登録', signup_path, class: 'btn btn-primary btn-block' %>
+  
+  
+<% else %>
+  <div class="text-center">
+    <h1 class="top-title">Welcome to Fehler!!</h1>
+    <h2 class="sub-title">〜失敗は成功の母〜</h2>
   </div>
-  <div class="col-sm-2 offset-sm-2">
-    <%= link_to 'ログイン', signup_path, class: 'btn btn-primary btn-block' %>
+  <div class="text-center">
+    <h3 class="d-title">Fehler!!とは</h3>
+    <div class='description'>
+      <p>"Fehler"とはドイツ語で「失敗」という意味です。</p>
+      <p>このサイトは失敗をみんなと共有するサイトです。</p>
+      <p>失敗から学べることはたくさんあります。</p>
+      <p>みんなの失敗から原因を研究するもよし。</p>
+      <p>失敗の備忘録にするもよし。</p>
+      <p>さあ、みんなの失敗を覗いてみましょう！！</p>
+    </div>
   </div>
-</div>
-
-
-
+  <div class="row">
+    <div class="col-sm-2 offset-sm-3">
+       <%= link_to '会員登録', signup_path, class: 'btn btn-primary btn-block' %>
+    </div>
+    <div class="col-sm-2 offset-sm-2">
+      <%= link_to 'ログイン', login_path, class: 'btn btn-primary btn-block' %>
+    </div>
+  </div>
+<% end %>  
