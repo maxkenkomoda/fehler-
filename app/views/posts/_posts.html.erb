@@ -1,0 +1,13 @@
+<div class="row">
+  <% posts.each do |post| %>
+  <div class="col-sm-4 text-center">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="post-title bg-light"><%= post.title.truncate(25) %></h5>
+        <p class="post_content"><%= post.content.truncate(50) %></p>
+      </div>
+      <div class="card-fotter">by <%= link_to post.user.name, user_path(post.user) %></div>
+    </div>
+  </div>  
+  <% end %>
+</div>

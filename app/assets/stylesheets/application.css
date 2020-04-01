@@ -38,3 +38,18 @@
     color: #666666;
     font-style: italic;
 }
+
+.fehler {
+    border: 100px;
+    font-size: 100px;
+}
+
+.sub_fehler {
+    border: 100px;
+    font-size: 30px;
+}
+
+.post_body {
+    font-size: 15px;
+}
+

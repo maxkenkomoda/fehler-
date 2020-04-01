@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates :birthday, presence: true
   validates :gender, presence: true
   has_secure_password
+  
+  has_many :posts
 end

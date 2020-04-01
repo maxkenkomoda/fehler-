@@ -1,6 +1,10 @@
 <% if logged_in? %>
   <div class="text-center">
-    <h1>Welcome Back!!</h1>
+    <h1 class="fehler">Fehler</h1>
+    <h2 class="sub_fehler">~みんなの失敗~</h2>
+  </div>
+  <div class="container">
+    <%= render 'posts/posts', posts: @posts %>
   </div>
   
   

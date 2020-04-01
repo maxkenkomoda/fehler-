@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, onlu:[:index, :show]
+  before_action :require_user_logged_in, only:[:index, :show]
+  before_action :get_user, only:[:index, :show]
   
-  
+  def index
+    get_user
+  end
   
   def show
-    @user = User.find(params[:id])
+    get_user
   end
 
   def new
@@ -27,6 +30,11 @@ class UsersController < ApplicationController
   private
   
   #パラメータ
+  def get_user
+    @user = User.find(params[:id])
+    @selfposts = current_user.posts.order(id: :desc).page(params[:page])
+  end
+  
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :job, :birthday, :gender)
   end
