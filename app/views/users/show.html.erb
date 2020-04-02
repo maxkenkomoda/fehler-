@@ -1,6 +1,12 @@
 <%= render 'users/user_profile', user: @user %>
 
-<div class="container">
-  <%= render 'posts/self_posts', selfposts: @selfposts %>
+
+<div class="text-center border-bottom mb-3">
+  <h3><%= @user.name %>さんの投稿</h3>
 </div>
+
+<div class="row justify-content">
+  <%= render 'posts/posts', posts: @post %>
+</div>
+
 

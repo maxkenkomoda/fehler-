@@ -30,13 +30,9 @@
     
       <div class="form-group">
         <%= f.label :birthday, '生年月日' %>
-        <%= f.text_field :birthday, class: 'form-control' %>
+        <%= f.text_field :birthday, class: 'form-control',placeholder: "例:2000年1月1日の場合、2000-01-01" %>
       </div>
     
-      <div class="ex">
-        <p>※生年月日が2000年1月1日の場合、2000-01-01と入力してください</p>
-      </div>
-      
     　<div class="form-group row">
         <div class="col-sm-2">
           <%= f.label :gender, '性別', {class: 'form-label'} %>
@@ -49,13 +45,9 @@
     
       <div class="form-group">
         <%= f.label :job, '職業' %>
-        <%= f.text_field :job, class: 'form-control' %>
+        <%= f.text_field :job, class: 'form-control',placeholder: "例:会社員、学生など" %>
       </div>
-    
-      <div class="ex">
-        <p>例:会社員、学生など</p>
-      </div>
-      
+
       <%= f.submit '会員登録', class: 'btn btn-primary btn-block' %>
 
     <% end %>  

@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create]
   
   #POSTのルーティング
-  resources :posts, only: [:new, :create, :destroy, :update, :show]
+  resources :posts, only: [:new, :create, :destroy, :edit, :update, :show]
 end

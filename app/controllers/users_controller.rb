@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   #パラメータ
   def get_user
     @user = User.find(params[:id])
-    @selfposts = current_user.posts.order(id: :desc).page(params[:page])
+    @post = @user.posts.order(id: :desc).page(params[:page]).per(12)
   end
   
   def user_params

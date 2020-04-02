@@ -1,11 +1,16 @@
 <% if logged_in? %>
   <div class="text-center">
-    <h1 class="fehler">Fehler</h1>
-    <h2 class="sub_fehler">~みんなの失敗~</h2>
+    <h1 class="fehler">Fehler!!</h1>
+    <h2 class="sub_fehler border-bottom mb-3">~みんなの失敗~</h2>
   </div>
-  <div class="container">
+  <div class="row">
+    <%= link_to 'あなたのFehlerを投稿する', new_post_path, class: 'btn btn-primary btn-lg col-sm-6 offset-3 mb-5' %>
+  </div>
+  <div class="row justify-content">
     <%= render 'posts/posts', posts: @posts %>
   </div>
+  
+
   
   
 <% else %>
@@ -25,11 +30,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-2 offset-sm-3">
+    <div class="col-sm-2 offset-sm-3 mb-5">
        <%= link_to '会員登録', signup_path, class: 'btn btn-primary btn-block' %>
     </div>
-    <div class="col-sm-2 offset-sm-2">
+    <div class="col-sm-2 offset-sm-2 mb-5">
       <%= link_to 'ログイン', login_path, class: 'btn btn-primary btn-block' %>
     </div>
+  </div>
+  <div class="row justify-content">
+    <%= render 'posts/posts', posts: @sampleposts %>
   </div>
 <% end %>  

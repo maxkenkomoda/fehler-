@@ -23,9 +23,13 @@
   <body>
     <%= render 'layouts/navbar' %>
       
+    <%= render 'layouts/flash_messages' %>
+    
     <div class="container">
-      <%= render 'layouts/flash_messages' %>
-    </div>
-    <%= yield %>
+      <%= yield %>
+    </div>  
   </body>
+  <footer>
+    <small>&copy; 2020 MAX.K.K</small>
+  </footer>
 </html>

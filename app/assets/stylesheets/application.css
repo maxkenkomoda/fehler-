@@ -34,10 +34,6 @@
     padding-top: 20px;
 }
 
-.ex p {
-    color: #666666;
-    font-style: italic;
-}
 
 .fehler {
     border: 100px;
@@ -53,3 +49,21 @@
     font-size: 15px;
 }
 
+.card-header {
+    height: 100px;
+}
+
+footer {
+    background-color: #0000cd;
+    text-align: center;
+}
+
+footer small {
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+}
+
+.card-body-1 {
+    height: 200px;
+}
