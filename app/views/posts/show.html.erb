@@ -2,8 +2,8 @@
   <h1><%= @post.title %></h1>
 </div>
 <div class="text-center">
-  <h3><%= @post.user.name %>さんによる投稿</h3>
-  <i class="fas fa-thumbs-up"></i>
+  <h4><%= @post.user.name %>さんによる投稿</h4>
+  <i class="fas fa-thumbs-up"></i><p><%= @count_likes %></p>
 </div>
 
 </div>
@@ -29,15 +29,11 @@
 </div>
 
 
-<div class="row border-top">
-  <% if current_user == @post.user %>
+<% if current_user == @post.user %>
+  <div class="row border-top">  
     <%= link_to "この投稿を削除", @post, method: :delete, data: { confirm: "本当によろしいですか？" }, class: "btn btn-danger btn-sm col-sm-2 offset-sm-3 mt-2 mb-5" %>
     <%= link_to "この投稿を編集", edit_post_path(@post), class: "btn btn-info btn-sm col-sm-2 offset-sm-2 mt-2 mb-5" %>
-  <% else %>
-    <div class="center-block">
-      <%= render 'favorites/like_button', post: @post %>
-    </div>
-  <% end %>
-   
-</div>
-
+  </div>
+<% else %>
+  <%= render 'favorites/like_button', post: @post %>
+<% end %>

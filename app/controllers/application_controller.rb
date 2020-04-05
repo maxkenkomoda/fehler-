@@ -10,7 +10,12 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  #def counts(post)
-    #@count_likes = post.favorites.count
-  #end
+  def counts(post)
+    @count_likes = post.favorites.count
+  end
+
+  def get_post
+    @post = Post.find(params[:id])
+  end
+
 end

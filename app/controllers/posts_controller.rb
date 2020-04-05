@@ -45,13 +45,10 @@ class PostsController < ApplicationController
 
   def show
     get_post
+    counts(@post)
   end
 
   private
-
-  def get_post
-    @post = Post.find(params[:id])
-  end
 
   def post_params
     params.require(:post).permit(:title, :content, :settle)
