@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+  
+  #def counts(post)
+    #@count_likes = post.favorites.count
+  #end
 end

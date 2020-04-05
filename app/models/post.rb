@@ -5,4 +5,7 @@ class Post < ApplicationRecord
   validates :content, presence: true, length: { maximum: 300 }
   validates :settle, presence: true, length: { maximum: 300 }
   
+  has_many :favorites
+  has_many :fav_users, through: :favorites, source: :user
+  
 end

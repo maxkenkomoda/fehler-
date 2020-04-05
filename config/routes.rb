@@ -9,8 +9,13 @@ Rails.application.routes.draw do
   
   #会員登録のルーティン
   get 'signup', to: 'users#new'
-  resources :users, only: [:show, :new, :create]
+  resources :users, only: [:show, :new, :create] do
+    member do
+      get :like
+    end
+  end
   
   #POSTのルーティング
   resources :posts, only: [:new, :create, :destroy, :edit, :update, :show]
+  resources :favorites, only: [:create, :destroy]
 end
