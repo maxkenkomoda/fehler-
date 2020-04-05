@@ -42,7 +42,11 @@ class PostsController < ApplicationController
       render :edit
     end
   end
-
+  
+  def ranking
+    @all_ranks = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+  end
+  
   def show
     get_post
     counts(@post)

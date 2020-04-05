@@ -1,0 +1,5 @@
+<% @all_ranks.each do |post| %>
+  <ul>
+    <ol><%= link_to post.title, post_path(post.id)  %></ol>
+  </ul>
+<% end %>

@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   #POSTのルーティング
   resources :posts, only: [:new, :create, :destroy, :edit, :update, :show]
   resources :favorites, only: [:create, :destroy]
+  
+  get 'ranking', to: 'posts#ranking'
 end
