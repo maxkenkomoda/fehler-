@@ -9,9 +9,9 @@
     </div>
     <div class="card-fotter">
       <p><%= link_to post.user.name, user_path(post.user) %>さんの投稿</p>
-      <i class="fas fa-thumbs-up"></i><p><%= count_likes %></p>
+      <i class="fas fa-thumbs-up"></i>:<%= post.favorites.count %>
     </div>
   </div>
 </div>
-    <%= paginate posts %>
+  <%= paginate posts %>
 <% end %>

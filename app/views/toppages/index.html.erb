@@ -7,10 +7,8 @@
     <%= link_to 'あなたのFehlerを投稿する', new_post_path, class: 'btn btn-primary btn-lg col-sm-6 offset-3 mb-5' %>
   </div>
   <div class="row justify-content">
-    <%= render 'posts/posts', posts: @posts, count_likes: @count_likes %>
+    <%= render 'layouts/posts', posts: @posts %>
   </div>
-  
-
   
   
 <% else %>
@@ -38,6 +36,6 @@
     </div>
   </div>
   <div class="row justify-content">
-    <%= render 'posts/posts', posts: @sampleposts %>
+    <%= render 'layouts/posts', posts: @sampleposts %>
   </div>
 <% end %>  

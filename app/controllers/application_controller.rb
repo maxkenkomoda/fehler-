@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   
   include SessionsHelper
   
+  def counts(post)
+    @count_likes = post.favorites.count
+  end
+  
   private
   
   def require_user_logged_in
@@ -10,12 +14,6 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def counts(post)
-    @count_likes = post.favorites.count
-  end
 
-  def get_post
-    @post = Post.find(params[:id])
-  end
-
+  
 end

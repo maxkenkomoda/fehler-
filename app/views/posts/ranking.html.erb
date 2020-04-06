@@ -1,5 +1,23 @@
-<% @all_ranks.each do |post| %>
-  <ul>
-    <ol><%= link_to post.title, post_path(post.id)  %></ol>
-  </ul>
-<% end %>
+<div class="text-center m-5">
+  <h1>トップ10の投稿ランキング</h1>
+</div>
+
+
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>お気に入り獲得数</th>
+      <th class="text-left">タイトル</th>
+      <th class="text-right">投稿ユーザー</th>
+    </tr>      
+  </thead>
+  <tbody>
+    <% @all_ranks.each do |post| %>  
+      <tr>
+        <td class="text-center"><%= post.favorites.count %></td> 
+        <td class="text-left"><%= link_to post.title, post_path(post.id)  %></td>
+        <td class="text-right"><%= link_to post.user.name, user_path(post.user) %></td>
+      </tr>
+    <% end %>  
+  </tbody>
+</table>

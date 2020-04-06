@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   end
   
   def ranking
-    @all_ranks = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+    @all_ranks = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
   end
   
   def show
@@ -53,7 +53,11 @@ class PostsController < ApplicationController
   end
 
   private
-
+  
+  def get_post
+    @post = Post.find(params[:id])
+  end
+  
   def post_params
     params.require(:post).permit(:title, :content, :settle)
   end
