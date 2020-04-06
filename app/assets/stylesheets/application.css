@@ -3,67 +3,73 @@
 
 
 .top-title {
-    margin-top: 100px;
-    margin-bottom: 5px;
+  margin-top: 100px;
+  margin-bottom: 5px;
 }
 
 .sub-title {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 
 .d-title {
-    margin-top: 100px;
+  margin-top: 100px;
     
 }
 
 .description {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .description p {
-    margin: 0px;
-    padding-top: 5px;
+  margin: 0px;
+  padding-top: 5px;
 }
 
 .user-card {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .spec {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 
 .fehler {
-    border: 100px;
-    font-size: 100px;
+  border: 100px;
+  font-size: 100px;
 }
 
 .sub_fehler {
-    border: 100px;
-    font-size: 30px;
+  border: 100px;
+  font-size: 30px;
 }
 
 .post_body {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .card-header {
-    height: 100px;
+  height: 100px;
 }
 
 footer {
-    background-color: #0000cd;
-    text-align: center;
+  background-color: #0000cd;
+  text-align: center;
 }
 
 footer small {
-    display: block;
-    padding: 8px 0;
-    color: #fff;
+  display: block;
+  padding: 8px 0;
+  color: #fff;
 }
 
 .card-body-1 {
-    height: 200px;
+  height: 200px;
+}
+
+.main-part {
+  background-img: url("<%= asset_path('top.jpg') %>")
+  height: 200px;
+  background-size: cover;
 }
