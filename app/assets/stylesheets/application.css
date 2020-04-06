@@ -68,8 +68,3 @@ footer small {
   height: 200px;
 }
 
-.main-part {
-  background-img: url("<%= asset_path('top.jpg') %>")
-  height: 200px;
-  background-size: cover;
-}
