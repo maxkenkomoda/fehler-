@@ -17,7 +17,7 @@ Railsを用いて基本的なCRUD機能のついたみんなの失敗をシェ�
   | Ruby | 2.5.3 |
   | Rails | 5.2.4.3|
   | SQL | MySQL 5.2.7.9 |
-  | Editor | Vim |  
+  | Editor | Cloud9 |  
   
   使用技術: HTML/CSS/Bootstrap/Ruby/Ruby on Rails/MySQL/Heroku
   
